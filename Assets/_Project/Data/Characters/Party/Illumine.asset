@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d037adff9e04706b4a24a2529895710, type: 3}
+  m_Name: Illumine
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Characters.PartyMemberData
+  characterID: illumine
+  characterName: Illumine
+  characterDescription: 
+  element: 7
+  baseStats:
+    vitality: 10
+    defense: 10
+    strength: 10
+    speed: 10
+    luck: 10
+  portrait: {fileID: -7782634659704380158, guid: 827ff8df6610e0344bfb735c742735f4, type: 3}
+  battleSprite: {fileID: 0}
+  spriteSet: {fileID: 11400000, guid: 78392c767e9543f478dd6d21fc165e59, type: 2}
+  prefab: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: cdcb9cbdc7ee5004aa1fc96bcc734f5d, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: 699e94315883f314683b366632e44699, type: 2}
+  surge: {fileID: 11400000, guid: c616594deb4f8d94c8d7163f6a7b561b, type: 2}
+  maxAp: 10
+  defaultPictos:
+  - {fileID: 11400000, guid: 08eda64bfbd61d5448e1b40d6bbf2ea7, type: 2}
+  startingWeapons:
+  - {fileID: 11400000, guid: 325e276721e675741b3d05587da85002, type: 2}
+  - {fileID: 11400000, guid: e06f36153b854634e8596710fa15a274, type: 2}
+  - {fileID: 11400000, guid: 8ae141347095c944d9c0432f07f36b22, type: 2}
+  skillTree: {fileID: 11400000, guid: 87fba4690bd359941bcc601caa41c76a, type: 2}
+  explorationAbility: 0
+  switchSound: {fileID: 0}

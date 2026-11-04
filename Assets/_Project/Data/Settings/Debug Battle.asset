@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1db9964ceb95744dbef58c491e06d1f, type: 3}
+  m_Name: Debug Battle
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Settings.DebugBattleData
+  activeParty:
+  - {fileID: 11400000, guid: 8580dfe74457056468c94082b878f58e, type: 2}
+  - {fileID: 11400000, guid: 8f69d934f44ca7d4ca6f5f57b2e6246a, type: 2}
+  - {fileID: 11400000, guid: 76b55721f30e39f48aca52514f54a15a, type: 2}
+  - {fileID: 11400000, guid: 4ab554e138bea0c4a962ea1199eb773b, type: 2}
+  benchedParty:
+  - {fileID: 11400000, guid: f69d72536c3ed6440b21c139375555d6, type: 2}
+  - {fileID: 11400000, guid: 4a52223b2aa99e54b86dec74dbb02d00, type: 2}
+  - {fileID: 11400000, guid: dad35fe4fd6906e44bb47c4a40dfe544, type: 2}
+  startingItems:
+  - item: {fileID: 11400000, guid: a323195e6c7fa20478c7a8db0fbb0149, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: 03ee337916491b14389c1d889b92725b, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: 5f0e1e8a8bb66c047b7aff729b6a6aae, type: 2}
+    count: 3
+  fusionSurges:
+  - {fileID: 11400000, guid: 1d2027b9a8693494fa2cb8f0986b28b7, type: 2}
+  enemies:
+  - {fileID: 11400000, guid: 53554a8d60ea8094b90718a34cb4b265, type: 2}
+  - {fileID: 11400000, guid: b9d5c9a90fb71e64f9eb57793a0705e6, type: 2}
+  - {fileID: 11400000, guid: b9d5c9a90fb71e64f9eb57793a0705e6, type: 2}
+  initiative: 1
+  unlockEverything: 1
+  startingAp: 10
+  overrideRelationships: 0
+  relationshipLevel: 5

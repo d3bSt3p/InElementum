@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d037adff9e04706b4a24a2529895710, type: 3}
+  m_Name: Terra
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Characters.PartyMemberData
+  characterID: terra
+  characterName: Terra
+  characterDescription: 
+  element: 5
+  baseStats:
+    vitality: 14
+    defense: 14
+    strength: 9
+    speed: 6
+    luck: 7
+  portrait: {fileID: -7369102425355122831, guid: 80d2f975904b0aa4b9a9840b0966bcc0, type: 3}
+  battleSprite: {fileID: 0}
+  spriteSet: {fileID: 11400000, guid: 623d0db8a56fae941b87b28b7199506c, type: 2}
+  prefab: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: c1da65be8370f684aa968655e6146143, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: c1edba618ea1b3f418404eaa961a82a1, type: 2}
+  surge: {fileID: 11400000, guid: 98a0cd5c63e66e64e9c2651d9956c3a1, type: 2}
+  maxAp: 10
+  defaultPictos:
+  - {fileID: 11400000, guid: 7a008ff54639bfb40a8f64ae74d085cb, type: 2}
+  startingWeapons:
+  - {fileID: 11400000, guid: 72942c5908080824d9d9bed21ea6c154, type: 2}
+  - {fileID: 11400000, guid: bb56d281ce34e3a42b419c82bb4f7cde, type: 2}
+  skillTree: {fileID: 11400000, guid: b690ce6daf0b28341906ff8f8ded45b4, type: 2}
+  explorationAbility: 5
+  switchSound: {fileID: 0}

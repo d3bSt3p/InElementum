@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88351610ab2a30e4197b7f569482cf84, type: 3}
+  m_Name: Feather Wisp
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Weapons.WeaponData
+  id: feather-wisp
+  displayName: Feather Wisp
+  icon: {fileID: 0}
+  description: Light as air; only the swift make it bite.
+  wielder: {fileID: 11400000, guid: f69d72536c3ed6440b21c139375555d6, type: 2}
+  element: 3
+  basePower: 1
+  powerPerLevel: 1
+  maxLevel: 10
+  scaling:
+  - stat: 3
+    grade: 3

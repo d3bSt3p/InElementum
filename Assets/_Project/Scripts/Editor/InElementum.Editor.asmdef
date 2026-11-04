@@ -1,0 +1,28 @@
+{
+    "name": "InElementum.Editor",
+    "rootNamespace": "InElementum.Editor",
+    "references": [
+        "InElementum.Runtime",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.Cinemachine",
+        "Unity.2D.Sprite.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.cinemachine",
+            "expression": "3.0.0",
+            "define": "IE_CINEMACHINE"
+        }
+    ],
+    "noEngineReferences": false
+}

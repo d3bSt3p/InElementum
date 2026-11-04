@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f29259e87442338a016acd10256ddc, type: 3}
+  m_Name: Footstep
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Containers.SoundProfileData
+  audioType: 23
+  randomClipList:
+  - {fileID: 8300000, guid: ad1b03e6030896345aa8ab10e6ef6530, type: 3}
+  - {fileID: 8300000, guid: c2808fe80bb864d49a8155fcffb07761, type: 3}
+  - {fileID: 8300000, guid: b8012921357ce774cbd335c6f4310bb8, type: 3}
+  - {fileID: 8300000, guid: 385318c3193f05c46a452260638f05eb, type: 3}
+  volume: 0.5
+  pitchVariance: 0.08
+  minInterval: 0.05

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0385c6a374b70564f808d2a53bd1287d, type: 3}
+  m_Name: Solar Flare (Fusion)
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Actions.SurgeData
+  id: Solar Flare
+  displayName: Solar Flare
+  icon: {fileID: 0}
+  description:
+  - descriptionText: Illumine and Phoenix unleash a blinding blaze.
+    enableOverrideColor: 0
+    overrideColor: {r: 0, g: 0, b: 0, a: 1}
+    useModifier: 0
+    modifiedEffectIndex: 0
+    modifierStatus: 0
+    modifierStat: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 0
+  specialKeywords: 
+  element: 1
+  targetType: 2
+  castTime: 0.5
+  effects:
+  - effectType: 0
+    targetType: 2
+    value: 70
+    delay: 0
+    status: 0
+    stat: 0
+  audioType: 0
+  fxType: 0
+  animationKey: 
+  owner: {fileID: 11400000, guid: 8580dfe74457056468c94082b878f58e, type: 2}
+  fusionPartner: {fileID: 11400000, guid: 8f69d934f44ca7d4ca6f5f57b2e6246a, type: 2}
+  gaugeCost: 1
+  unlockSource: 3

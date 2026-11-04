@@ -1,0 +1,235 @@
+/* Shared look for every game screen: dark ink panels, thin silver and gilt rules, a blue sweep for focus.
+   Layout units are 720 tall (see HudPanel). Colors set from code live in HudColors. */
+
+:root {
+    --ie-ink: rgba(8, 10, 18, 0.9);
+    --ie-ink-soft: rgba(8, 10, 18, 0.65);
+    --ie-gilt: rgba(219, 204, 158, 0.7);
+    --ie-accent: rgb(247, 217, 143);
+    --ie-text: rgb(247, 245, 235);
+    --ie-muted: rgb(153, 156, 163);
+    --ie-party-hp: rgb(92, 204, 143);
+    --ie-enemy-hp: rgb(219, 56, 61);
+    --ie-ap: rgb(89, 140, 255);
+    --ie-surge: rgb(191, 115, 255);
+    --ie-red: rgb(255, 71, 71);
+    --ie-track: rgba(31, 31, 36, 0.9);
+}
+
+.ie-root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--ie-text);
+    font-size: 14px;
+}
+
+/* Clears the default theme's label spacing. One class, so it outranks the theme (which sits further up the tree)
+   but not a screen's own one-class rules such as .ie-hint__label's margin. */
+.unity-label {
+    padding: 0;
+    margin: 0;
+}
+
+.ie-root Label {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+}
+
+/* Diamonds and badges */
+.ie-diamond {
+    flex-shrink: 0;
+}
+
+.ie-diamond__shape {
+    rotate: 45deg;
+}
+
+.ie-emblem {
+    flex-shrink: 0;
+}
+
+.ie-emblem__initials {
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    color: rgb(0, 0, 0);
+}
+
+/* USS has no `text-shadow: none`; a transparent shadow cancels the `.ie-root Label` one. */
+.ie-root Label.ie-emblem__initials {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Keys and buttons */
+.ie-key {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ie-key__slot {
+    overflow: visible;
+    flex-shrink: 0;
+}
+
+.ie-key__slash {
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    font-size: 12px;
+    color: var(--ie-muted);
+}
+
+.ie-key__cap {
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    font-size: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: var(--ie-ink);
+    border-width: 1px;
+    border-color: rgba(247, 245, 235, 0.7);
+}
+
+.ie-key__cap--pad {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* The controls strip in the bottom left */
+.ie-hints {
+    position: absolute;
+    left: 24px;
+    bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ie-hint {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 28px;
+}
+
+.ie-hint__label {
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.ie-hint--clickable:hover .ie-hint__label {
+    color: var(--ie-accent);
+}
+
+/* World-space labels and prompts */
+.ie-world {
+    translate: -50% -50%;
+}
+
+.ie-world-text__label {
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.ie-world-text--boxed {
+    padding: 8px 12px;
+    max-width: 360px;
+}
+
+.ie-world-text--boxed .ie-world-text__label {
+    white-space: normal;
+    -unity-font-style: normal;
+}
+
+.ie-world-prompt {
+    flex-direction: row;
+    align-items: center;
+}
+
+.ie-world-prompt__text {
+    -unity-font-style: bold;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+/* Kenney frames: the border child is laid over the fill */
+.ie-frame__border {
+    position: absolute;
+}
+
+/* A thin bar with a track */
+.ie-bar {
+    background-color: var(--ie-track);
+    overflow: hidden;
+}
+
+.ie-bar__fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Debug panels */
+.ie-debug {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 400px;
+    max-height: 520px;
+    padding: 12px 14px;
+}
+
+.ie-debug__title {
+    -unity-font-style: bold;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.ie-debug__note {
+    font-size: 11px;
+    color: var(--ie-muted);
+    white-space: normal;
+    margin-bottom: 6px;
+}
+
+.ie-debug__row {
+    height: 26px;
+    margin: 1px 0;
+    padding: 0 8px;
+    -unity-text-align: middle-left;
+    background-color: rgba(18, 20, 28, 0.84);
+    border-width: 0;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-color: rgba(209, 214, 224, 0.55);
+    color: var(--ie-text);
+    font-size: 13px;
+}
+
+.ie-debug__row:hover {
+    background-color: rgba(26, 92, 204, 0.85);
+    border-color: var(--ie-accent);
+}
+
+.ie-debug__line {
+    font-size: 12px;
+    white-space: normal;
+    margin-top: 4px;
+}
+
+.ie-debug__warning {
+    font-size: 12px;
+    white-space: normal;
+    color: rgb(255, 140, 115);
+    margin-top: 6px;
+}
+
+/* The full-screen fade between the room and combat */
+.ie-fade {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}

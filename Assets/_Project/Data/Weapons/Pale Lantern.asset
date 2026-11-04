@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88351610ab2a30e4197b7f569482cf84, type: 3}
+  m_Name: Pale Lantern
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Weapons.WeaponData
+  id: pale-lantern
+  displayName: Pale Lantern
+  icon: {fileID: 0}
+  description: A plain lantern on a chain, swung hard.
+  wielder: {fileID: 11400000, guid: 8580dfe74457056468c94082b878f58e, type: 2}
+  element: 0
+  basePower: 4
+  powerPerLevel: 1
+  maxLevel: 10
+  scaling:
+  - stat: 4
+    grade: 2

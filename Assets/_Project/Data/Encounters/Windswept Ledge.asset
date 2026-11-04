@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6deb865905fbb469f5ec8458d08c8c, type: 3}
+  m_Name: Windswept Ledge
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Containers.EncounterData
+  displayName: Windswept Ledge
+  enemies:
+  - {fileID: 11400000, guid: c0489d4e2a1f8924fb283b01959cb29a, type: 2}
+  - {fileID: 11400000, guid: 4be2f9ce7a8f9534a9a3046a5f13fba2, type: 2}
+  backdropColor: {r: 0.1, g: 0.14, b: 0.2, a: 1}

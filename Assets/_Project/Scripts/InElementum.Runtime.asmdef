@@ -1,0 +1,25 @@
+{
+    "name": "InElementum.Runtime",
+    "rootNamespace": "InElementum",
+    "references": [
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.InputSystem",
+        "Unity.Cinemachine"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.cinemachine",
+            "expression": "3.0.0",
+            "define": "IE_CINEMACHINE"
+        }
+    ],
+    "noEngineReferences": false
+}

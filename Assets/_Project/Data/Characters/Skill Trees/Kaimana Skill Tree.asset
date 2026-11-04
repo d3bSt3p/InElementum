@@ -1,0 +1,402 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079e5d37c43fe134baea08e6be13e625, type: 3}
+  m_Name: Kaimana Skill Tree
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.SkillTrees.SkillTreeData
+  nodes:
+  - id: adf28e9a
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 0, y: 0}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 2
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites: []
+  - id: ff61f6dc
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 1, y: 0}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 4
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - adf28e9a
+  - id: fc6098b8
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 2, y: 0}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 2
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - ff61f6dc
+  - id: a2dbb7e6
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 3, y: 0}
+    isMajor: 1
+    cost: 2
+    kind: 0
+    modifiers:
+    - stat: 2
+      kind: 1
+      value: 0.1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - fc6098b8
+  - id: 2be57d4b
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 4, y: 0}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 4
+      kind: 0
+      value: 2
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - a2dbb7e6
+  - id: dd1e5973
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 5, y: 0}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 2
+      kind: 0
+      value: 2
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - 2be57d4b
+  - id: 2e2e1a7e
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 0, y: 2}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 0
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites: []
+  - id: 2fbee2f8
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 1, y: 2}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 1
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - 2e2e1a7e
+  - id: 0cabdbe9
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 2, y: 2}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 0
+      kind: 0
+      value: 2
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - 2fbee2f8
+  - id: df3596d3
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 3, y: 2}
+    isMajor: 1
+    cost: 2
+    kind: 0
+    modifiers:
+    - stat: 1
+      kind: 1
+      value: 0.1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - 0cabdbe9
+  - id: d2cdbf61
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 4, y: 2}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 0
+      kind: 0
+      value: 2
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - df3596d3
+  - id: 2b7054d5
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 5, y: 2}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 1
+      kind: 0
+      value: 2
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - d2cdbf61
+  - id: 200c6316
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 6, y: 2}
+    isMajor: 1
+    cost: 2
+    kind: 0
+    modifiers:
+    - stat: 0
+      kind: 1
+      value: 0.15
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - 2b7054d5
+  - id: 53e818fe
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 0, y: 4}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 3
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites: []
+  - id: f7f2dbfb
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 1, y: 4}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 4
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - 53e818fe
+  - id: 65e259a7
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 2, y: 4}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 3
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - f7f2dbfb
+  - id: 0e42232d
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 3, y: 4}
+    isMajor: 1
+    cost: 2
+    kind: 0
+    modifiers:
+    - stat: 3
+      kind: 1
+      value: 0.1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - 65e259a7
+  - id: f68f5751
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 4, y: 4}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 4
+      kind: 0
+      value: 2
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - 0e42232d
+  - id: f6d74c51
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 5, y: 4}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 3
+      kind: 0
+      value: 2
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - f68f5751
+  - id: 55dab52a
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 6, y: 4}
+    isMajor: 1
+    cost: 2
+    kind: 0
+    modifiers:
+    - stat: 4
+      kind: 1
+      value: 0.15
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - f6d74c51
+  - id: ebf372b9
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 3, y: 1}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 1
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - a2dbb7e6
+    - df3596d3
+  - id: f2bb8b01
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 3, y: 3}
+    isMajor: 0
+    cost: 1
+    kind: 0
+    modifiers:
+    - stat: 3
+      kind: 0
+      value: 1
+    ability: {fileID: 0}
+    surge: {fileID: 0}
+    passive: {fileID: 0}
+    prerequisites:
+    - df3596d3
+    - 0e42232d
+  - id: a21b7b26
+    displayName: 
+    description: 
+    icon: {fileID: 0}
+    position: {x: 6, y: 0}
+    isMajor: 1
+    cost: 3
+    kind: 2
+    modifiers: []
+    ability: {fileID: 0}
+    surge: {fileID: 11400000, guid: 3407c2c787a429f498084d7bd74bdef3, type: 2}
+    passive: {fileID: 0}
+    prerequisites:
+    - dd1e5973

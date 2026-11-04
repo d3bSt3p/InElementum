@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521fbb1127ffb744facc7b1a93c3480a, type: 3}
+  m_Name: Element Chart
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Settings.ElementChart
+  pairs:
+  - element: 2
+    counters: 1
+  - element: 1
+    counters: 3
+  - element: 3
+    counters: 5
+  - element: 5
+    counters: 4
+  - element: 4
+    counters: 2
+  - element: 7
+    counters: 6
+  - element: 6
+    counters: 7

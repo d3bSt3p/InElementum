@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927b292ef0cf36940a68793663a4101f, type: 3}
+  m_Name: Umbral Drain
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Actions.AbilityData
+  id: Umbral Drain
+  displayName: Umbral Drain
+  icon: {fileID: 0}
+  description:
+  - descriptionText: Drains health from an enemy.
+    enableOverrideColor: 0
+    overrideColor: {r: 0, g: 0, b: 0, a: 1}
+    useModifier: 0
+    modifiedEffectIndex: 0
+    modifierStatus: 0
+    modifierStat: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 0
+  specialKeywords: 
+  element: 6
+  targetType: 0
+  castTime: 1.5
+  effects:
+  - effectType: 3
+    targetType: 0
+    value: 10
+    delay: 0
+    status: 0
+    stat: 0
+  audioType: 0
+  fxType: 0
+  animationKey: 
+  apCost: 3
+  unlockSource: 0
+  hasQte: 1
+  qte:
+    type: 0
+    timingWindow: 0.5
+    successMultiplier: 1.5

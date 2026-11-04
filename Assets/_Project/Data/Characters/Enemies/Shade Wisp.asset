@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2612027158f847538279f7d8f10dff91, type: 3}
+  m_Name: Shade Wisp
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Characters.EnemyCharacterData
+  characterID: Shade Wisp
+  characterName: Shade Wisp
+  characterDescription: 
+  element: 6
+  baseStats:
+    vitality: 5
+    defense: 3
+    strength: 9
+    speed: 10
+    luck: 6
+  portrait: {fileID: 0}
+  battleSprite: {fileID: 0}
+  prefab: {fileID: 0}
+  followAbilityPattern: 1
+  enemyAbilityList:
+  - name: Chill Touch
+    intention: {fileID: 11400000, guid: b6ca6a6865551c348bf95c01040874ae, type: 2}
+    hideActionValue: 0
+    actionList:
+    - effectType: 0
+      targetType: 0
+      minActionValue: 3
+      maxActionValue: 6
+      status: 0
+      stat: 0
+    hitCount: 1
+    element: 6
+    castTime: 1
+    isSteadfast: 0
+    defenseRule: 0
+    hitDelays: []
+    isGuard: 0
+    guardCounterPower: 0
+  - name: Soul Rend
+    intention: {fileID: 11400000, guid: b6ca6a6865551c348bf95c01040874ae, type: 2}
+    hideActionValue: 0
+    actionList:
+    - effectType: 0
+      targetType: 0
+      minActionValue: 10
+      maxActionValue: 13
+      status: 0
+      stat: 0
+    hitCount: 1
+    element: 6
+    castTime: 1
+    isSteadfast: 0
+    defenseRule: 0
+    hitDelays: []
+    isGuard: 0
+    guardCounterPower: 0
+  affinities:
+  - element: 7
+    damageMultiplier: 2
+  - element: 6
+    damageMultiplier: 0.5
+  breakMeter: 0
+  rewards:
+    experience: 20
+    currencyMin: 15
+    currencyMax: 25
+    materialDrops:
+    - material: {fileID: 11400000, guid: 4bdfe57b357dd604cadd946c68ec9319, type: 2}
+      amount: 2
+      chance: 0.75
+    pictoDrop: {fileID: 11400000, guid: 8c7c0dbaf5c05164db2ef9eda482fe1e, type: 2}
+  voice: {fileID: 11400000, guid: 7fe0333e67e949d9a9b52e5decaf08e3, type: 2}

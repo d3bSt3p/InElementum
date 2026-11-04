@@ -1,0 +1,1543 @@
+/* The pause menu, in the look every game screen shares (Hud.uss): ink plates with Kenney gilt frames, bevelled
+   bars that take a blue sweep when selected, gilt section headings, element diamonds, and key prompts in the bottom
+   left. Layout units are 720 tall (see HudPanel). Colors come from Hud.uss's --ie-* variables; the few set from code
+   live in HudColors. */
+
+.menu-root {
+    --mn-row: rgba(18, 20, 28, 0.84);
+    --mn-edge: rgba(209, 214, 224, 0.55);
+    --mn-line: rgba(209, 214, 224, 0.09);
+    --mn-sweep: rgba(26, 92, 204, 0.85);
+    --mn-soft-text: rgb(205, 208, 214);
+    --mn-exp: rgb(230, 189, 112);
+    --mn-good: rgb(126, 214, 140);
+    --mn-bad: rgb(240, 110, 96);
+}
+
+/* ---- Frame ---- */
+
+.menu-root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.menu-root .menu-backdrop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(5, 6, 11, 0.97);
+}
+
+.menu-root .menu-glow {
+    position: absolute;
+    left: -420px;
+    top: -380px;
+    width: 1200px;
+    height: 1200px;
+    -unity-background-image-tint-color: rgba(26, 70, 170, 0.2);
+}
+
+.menu-root .menu-body {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 56px;
+    flex-direction: row;
+    padding-top: 26px;
+    padding-right: 26px;
+}
+
+/* Category list */
+.menu-root .nav {
+    width: 222px;
+}
+
+.menu-root .nav-title {
+    font-size: 26px;
+    -unity-font-style: bold;
+    margin-left: 30px;
+}
+
+.menu-root .nav-rule {
+    width: 176px;
+    height: 1px;
+    margin: 8px 0 16px 30px;
+    -unity-background-image-tint-color: var(--ie-gilt);
+}
+
+.menu-root .nav-list {
+    flex-grow: 1;
+}
+
+.menu-root .nav-item {
+    width: 182px;
+    height: 32px;
+    margin-left: 18px;
+    transition-property: translate;
+    transition-duration: 0.08s;
+}
+
+.menu-root .nav-item__pointer {
+    width: 16px;
+    font-size: 10px;
+    color: var(--ie-accent);
+    opacity: 0;
+}
+
+.menu-root .nav-item__label {
+    font-size: 16px;
+    color: var(--ie-muted);
+}
+
+.menu-root .nav-item--selected {
+    translate: 8px 0;
+}
+
+.menu-root .nav-item--selected .nav-item__pointer {
+    opacity: 1;
+}
+
+.menu-root .nav-item--selected .nav-item__label {
+    color: var(--ie-text);
+}
+
+.menu-root .nav-item--entered > .mrow__sweep {
+    opacity: 0.5;
+}
+
+.menu-root .nav-item--entered .nav-item__pointer {
+    opacity: 0.4;
+}
+
+.menu-root .nav-item--close {
+    margin-top: 12px;
+}
+
+.menu-root .nav-footer {
+    margin: 0 24px 4px 30px;
+    padding-top: 8px;
+    border-top-width: 1px;
+    border-top-color: rgba(219, 204, 158, 0.35);
+}
+
+.menu-root .nav-footer__row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 4px;
+}
+
+.menu-root .nav-footer__caption {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+    margin-bottom: 2px;
+}
+
+.menu-root .nav-footer__value {
+    font-size: 15px;
+}
+
+/* Party diamonds */
+.menu-root .party-strip {
+    width: 58px;
+    padding-top: 44px;
+    align-items: center;
+}
+
+.menu-root .strip-tile {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 2px;
+    align-items: center;
+    justify-content: center;
+    transition-property: scale;
+    transition-duration: 0.08s;
+}
+
+.menu-root .strip-tile--selected {
+    scale: 1.14 1.14;
+}
+
+.menu-root .strip-tile--benched {
+    opacity: 0.5;
+}
+
+/* The plate the screens sit on */
+.menu-root .content {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left: 6px;
+    padding: 18px 24px 16px 24px;
+}
+
+.menu-root .screen {
+    flex-grow: 1;
+}
+
+/* ---- Shared pieces ---- */
+
+/* Section heading: a gilt diamond, the caption in capitals, a fading rule */
+.menu-root .mhead {
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    margin: 2px 0 6px 0;
+}
+
+.menu-root .mhead__jewel {
+    margin-right: 8px;
+}
+
+.menu-root .mhead__label {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: var(--ie-accent);
+    letter-spacing: 1px;
+}
+
+.menu-root .mhead__rule {
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 10px;
+    -unity-background-image-tint-color: var(--ie-gilt);
+}
+
+.menu-root .mhead__other {
+    font-size: 11px;
+    color: var(--ie-muted);
+    margin-left: 10px;
+}
+
+.menu-root .mrule {
+    height: 1px;
+    margin: 6px 0;
+    -unity-background-image-tint-color: var(--ie-gilt);
+}
+
+/* Bevelled bar, as in the combat command menu */
+.menu-root .mrow {
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    padding: 0 10px;
+    margin-bottom: 3px;
+    background-color: var(--mn-row);
+    flex-shrink: 0;
+}
+
+.menu-root .mrow__sweep {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-image-tint-color: var(--mn-sweep);
+    display: none;
+}
+
+.menu-root .mrow--selected > .mrow__sweep {
+    display: flex;
+}
+
+.menu-root .mrow__bevel-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    -unity-background-image-tint-color: var(--mn-edge);
+}
+
+.menu-root .mrow__bevel-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--mn-edge);
+}
+
+.menu-root .mrow__tick-h {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 7px;
+    height: 1px;
+    background-color: var(--mn-edge);
+}
+
+.menu-root .mrow__tick-v {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 7px;
+    background-color: var(--mn-edge);
+}
+
+.menu-root .mrow--selected > .mrow__bevel-top {
+    -unity-background-image-tint-color: var(--ie-accent);
+}
+
+.menu-root .mrow--selected > .mrow__bevel-left,
+.menu-root .mrow--selected > .mrow__tick-h,
+.menu-root .mrow--selected > .mrow__tick-v {
+    background-color: var(--ie-accent);
+}
+
+.menu-root .mmark {
+    margin-right: 8px;
+}
+
+/* Gauge readout like the combat party cards: tag, value, "/ max" */
+.menu-root .mgauge {
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.menu-root .mgauge__tag {
+    font-size: 11px;
+    -unity-font-style: bold;
+    margin-right: 6px;
+    margin-bottom: 3px;
+    color: var(--ie-muted);
+}
+
+.menu-root .mgauge__tag--hp {
+    color: var(--ie-party-hp);
+}
+
+.menu-root .mgauge__tag--xp {
+    color: var(--mn-exp);
+}
+
+.menu-root .mgauge__value {
+    font-size: 19px;
+}
+
+.menu-root .mgauge__max {
+    font-size: 12px;
+    color: var(--ie-muted);
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.menu-root .bar {
+    height: 4px;
+    margin-top: 4px;
+    background-color: var(--ie-track);
+    overflow: hidden;
+}
+
+.menu-root .bar__fill {
+    height: 100%;
+    width: 0;
+    background-color: var(--ie-accent);
+}
+
+.menu-root .bar--hp .bar__fill {
+    background-color: var(--ie-party-hp);
+}
+
+.menu-root .bar--xp .bar__fill {
+    background-color: var(--mn-exp);
+}
+
+/* Label rows: caption left, value right, a hairline beneath */
+.menu-root .stat-row {
+    flex-direction: row;
+    align-items: center;
+    height: 26px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--mn-line);
+}
+
+.menu-root .stat-row__name {
+    flex-grow: 1;
+    font-size: 14px;
+    color: var(--mn-soft-text);
+}
+
+.menu-root .stat-row__value {
+    font-size: 16px;
+    -unity-text-align: middle-right;
+}
+
+.menu-root .stat-row__value--text {
+    font-size: 14px;
+}
+
+.menu-root .stat-row__bonus {
+    width: 34px;
+    margin-left: 4px;
+    font-size: 11px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-right;
+    color: var(--mn-good);
+}
+
+.menu-root .stat-row__bonus--down {
+    color: var(--mn-bad);
+}
+
+.menu-root .inventory-empty {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--ie-muted);
+    -unity-text-align: middle-center;
+}
+
+/* ---- Character sheet pieces (Party details) ---- */
+
+.menu-root .status-tags {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.menu-root .status-tags .mmark {
+    margin-right: 6px;
+}
+
+.menu-root .status-tag {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+    margin-right: 14px;
+}
+
+.menu-root .status-tag--active {
+    color: var(--ie-accent);
+}
+
+.menu-root .action-card {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 8px 12px 10px 12px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.menu-root .action-card--last {
+    margin-right: 0;
+}
+
+.menu-root .action-card__top {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-root .action-card__kind {
+    font-size: 10px;
+    -unity-font-style: bold;
+    margin-right: 10px;
+    color: var(--ie-muted);
+}
+
+.menu-root .action-card__kind--attack {
+    color: var(--ie-accent);
+}
+
+.menu-root .action-card__kind--surge {
+    color: var(--ie-surge);
+}
+
+.menu-root .action-card__name {
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+.menu-root .action-card__state {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: var(--mn-good);
+}
+
+.menu-root .action-card__state--locked {
+    color: var(--ie-muted);
+}
+
+.menu-root .action-card__text {
+    white-space: normal;
+    font-size: 12px;
+    margin-top: 4px;
+    color: var(--mn-soft-text);
+}
+
+/* ---- Party ---- */
+
+.menu-root .screen--party {
+    flex-direction: row;
+}
+
+.menu-root .party-main {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.menu-root .party-list {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/* The cursor steps its card out to the right, like the acting member's card in battle. The right margin leaves the
+   stepped-out card room inside the scroll view. */
+.menu-root .party-row {
+    height: 52px;
+    margin-right: 18px;
+    transition-property: translate;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out-quad;
+}
+
+.menu-root .party-row.mrow--selected {
+    translate: 18px 0;
+}
+
+/* Only the active party wears the blue sweep; on the bench the cursor is the step-out alone */
+.menu-root .party-row.mrow--selected > .mrow__sweep {
+    display: none;
+}
+
+.menu-root .party-row.party-row--active > .mrow__sweep {
+    display: flex;
+}
+
+.menu-root .party-row.table-row--held > .mrow__sweep {
+    display: flex;
+    opacity: 0.45;
+}
+
+.menu-root .party-row--active > .mrow__bevel-top {
+    -unity-background-image-tint-color: var(--ie-accent);
+}
+
+.menu-root .party-row--active > .mrow__bevel-left,
+.menu-root .party-row--active > .mrow__tick-h,
+.menu-root .party-row--active > .mrow__tick-v {
+    background-color: var(--ie-accent);
+}
+
+.menu-root .party-row__index {
+    width: 22px;
+    font-size: 15px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+    -unity-text-align: middle-center;
+}
+
+.menu-root .mrow--selected .party-row__index,
+.menu-root .party-row--active .party-row__index {
+    color: var(--ie-accent);
+}
+
+.menu-root .party-row__figure {
+    margin: 0 10px 0 4px;
+}
+
+/* A character's sprite still standing on their element diamond (CharacterFigure) */
+.menu-root .character-figure {
+    flex-shrink: 0;
+}
+
+.menu-root .character-figure__sprite {
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.menu-root .party-row__info {
+    flex-grow: 1;
+}
+
+.menu-root .party-row__top {
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-root .party-row__name {
+    font-size: 16px;
+    -unity-font-style: bold;
+}
+
+.menu-root .party-row__level {
+    width: 48px;
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+.menu-root .party-row__gauge {
+    width: 118px;
+    margin-right: 4px;
+}
+
+.menu-root .party-row__bar {
+    margin-top: 2px;
+    height: 3px;
+}
+
+/* The member's sheet down the side */
+.menu-root .party-side {
+    width: 480px;
+    margin-left: 20px;
+}
+
+.menu-root .party-detail {
+    flex-grow: 1;
+    padding: 12px 16px 14px 16px;
+}
+
+.menu-root .party-detail__who {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.menu-root .party-detail__emblem {
+    margin-right: 14px;
+}
+
+.menu-root .party-detail__titles {
+    flex-grow: 1;
+}
+
+.menu-root .party-detail__name {
+    font-size: 22px;
+    -unity-font-style: bold;
+}
+
+.menu-root .party-detail__gauges {
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.menu-root .party-detail__gauge {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.menu-root .party-detail__gauge--left {
+    margin-right: 22px;
+}
+
+.menu-root .party-detail__columns {
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.menu-root .party-detail__column {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.menu-root .party-detail__column--left {
+    margin-right: 48px;
+}
+
+.menu-root .party-detail__actions {
+    flex-direction: row;
+    min-height: 96px;
+}
+
+/* ---- Character pages: the tab bar over Pictos and Skills ---- */
+
+.menu-root .page-tabs {
+    flex-direction: row;
+    align-items: center;
+    height: 38px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(219, 204, 158, 0.35);
+    flex-shrink: 0;
+}
+
+.menu-root .page-tabs__member {
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-root .page-tabs__emblem {
+    margin: 0 8px 0 10px;
+}
+
+.menu-root .page-tabs__name {
+    margin-right: 10px;
+    font-size: 18px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}
+
+.menu-root .page-tabs__spacer {
+    flex-grow: 1;
+}
+
+.menu-root .page-tab {
+    height: 26px;
+    margin: 0 6px;
+    padding: 0 14px;
+    justify-content: center;
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.menu-root .page-tab__label {
+    font-size: 13px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    color: var(--ie-muted);
+}
+
+.menu-root .page-tab--selected {
+    border-bottom-color: var(--ie-accent);
+}
+
+.menu-root .page-tab--selected .page-tab__label {
+    color: var(--ie-accent);
+}
+
+/* ---- Inventory ---- */
+
+.menu-root .screen--inventory {
+    flex-direction: row;
+}
+
+.menu-root .inventory-main {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.menu-root .inventory-tabs {
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.menu-root .inventory-tabs__key {
+    margin: 0 6px;
+}
+
+.menu-root .inventory-tab {
+    height: 28px;
+    padding: 0 14px;
+    justify-content: center;
+}
+
+.menu-root .inventory-tab__sweep {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-image-tint-color: var(--mn-sweep);
+    display: none;
+}
+
+.menu-root .inventory-tab__label {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+.menu-root .inventory-tab__underline {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--ie-accent);
+    display: none;
+}
+
+.menu-root .inventory-tab--selected > .inventory-tab__sweep,
+.menu-root .inventory-tab--selected > .inventory-tab__underline {
+    display: flex;
+}
+
+.menu-root .inventory-tab--selected .inventory-tab__label {
+    color: var(--ie-text);
+}
+
+.menu-root .inventory-tabs__spacer {
+    flex-grow: 1;
+}
+
+.menu-root .inventory-count {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+.menu-root .table-header {
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    padding-left: 50px;
+    padding-right: 10px;
+}
+
+.menu-root .table-header Label {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+.menu-root .inventory-list {
+    flex-grow: 1;
+}
+
+.menu-root .table-row__pointer {
+    width: 14px;
+    font-size: 10px;
+    color: var(--ie-accent);
+    opacity: 0;
+}
+
+.menu-root .mrow--selected > .table-row__pointer,
+.menu-root .table-row--held > .table-row__pointer {
+    opacity: 1;
+}
+
+.menu-root .table-row--held > .mrow__sweep {
+    display: flex;
+    opacity: 0.45;
+}
+
+.menu-root .table-row__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.menu-root .table-row__mark {
+    margin: 0 14px 0 4px;
+}
+
+.menu-root .col-name {
+    flex-grow: 1;
+    font-size: 15px;
+}
+
+.menu-root .col-count {
+    width: 80px;
+    font-size: 15px;
+    -unity-text-align: middle-right;
+}
+
+/* Description, like the combat HUD's bottom panel: text, then a divided meta column */
+.menu-root .description-box {
+    flex-direction: row;
+    min-height: 66px;
+    padding: 12px 18px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.menu-root .description-box__text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    white-space: normal;
+    font-size: 14px;
+}
+
+.menu-root .description-box__meta {
+    width: 140px;
+    margin-left: 14px;
+    padding-left: 14px;
+    border-left-width: 1px;
+    border-left-color: rgba(209, 214, 224, 0.35);
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-root .description-box__caption {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+.menu-root .description-box__value {
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+/* Party down the side */
+.menu-root .inventory-side {
+    width: 264px;
+    margin-left: 24px;
+}
+
+.menu-root .side-member {
+    height: 56px;
+}
+
+.menu-root .side-member__emblem {
+    margin-right: 10px;
+}
+
+.menu-root .side-member__info {
+    flex-grow: 1;
+}
+
+.menu-root .side-member__top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-root .side-member__name {
+    font-size: 14px;
+    -unity-font-style: bold;
+}
+
+.menu-root .side-member__level {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+.menu-root .side-member .mgauge__value {
+    font-size: 14px;
+}
+
+.menu-root .side-member .mgauge__tag {
+    font-size: 9px;
+    margin-bottom: 2px;
+}
+
+.menu-root .side-member .mgauge__max {
+    font-size: 11px;
+    margin-bottom: 1px;
+}
+
+.menu-root .side-member__bar {
+    margin-top: 2px;
+    height: 3px;
+}
+
+.menu-root .side-member--disabled {
+    opacity: 0.4;
+}
+
+/* ---- Weapon ---- */
+
+.menu-root .screen--weapon {
+    flex-direction: row;
+}
+
+.menu-root .weapon-left {
+    width: 330px;
+}
+
+.menu-root .weapon-list {
+    flex-grow: 1;
+}
+
+.menu-root .weapon-row__equipped {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--ie-accent);
+    display: none;
+}
+
+.menu-root .weapon-row--equipped > .weapon-row__equipped {
+    display: flex;
+}
+
+.menu-root .weapon-row .mmark {
+    margin: 0 10px 0 4px;
+}
+
+.menu-root .weapon-row__name {
+    flex-grow: 1;
+    font-size: 15px;
+}
+
+.menu-root .weapon-row--equipped .weapon-row__name {
+    color: var(--ie-accent);
+}
+
+.menu-root .weapon-row__level {
+    font-size: 11px;
+    color: var(--ie-muted);
+    margin-right: 12px;
+}
+
+.menu-root .weapon-row__power {
+    width: 30px;
+    font-size: 16px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-right;
+}
+
+.menu-root .weapon-row__holder {
+    margin-left: 8px;
+}
+
+.menu-root .weapon-middle {
+    width: 300px;
+    margin-left: 22px;
+}
+
+/* A weapon card: name and level, then Power, Element, and scaling grades in columns */
+.menu-root .weapon-card {
+    padding: 10px 16px 12px 16px;
+    margin-bottom: 12px;
+}
+
+.menu-root .weapon-card__top {
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.menu-root .weapon-card__name {
+    flex-grow: 1;
+    font-size: 18px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    color: var(--ie-accent);
+    margin-bottom: 2px;
+}
+
+.menu-root .weapon-card__level {
+    align-items: flex-end;
+}
+
+.menu-root .weapon-card__level-value {
+    font-size: 22px;
+    -unity-font-style: bold;
+}
+
+.menu-root .weapon-card__stats {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 6px;
+}
+
+.menu-root .weapon-card__grades {
+    flex-direction: row;
+}
+
+.menu-root .weapon-stat {
+    margin-right: 18px;
+}
+
+.menu-root .weapon-stat__caption {
+    font-size: 10px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    color: var(--ie-muted);
+}
+
+.menu-root .weapon-stat__line {
+    flex-direction: row;
+    align-items: flex-end;
+    height: 36px;
+}
+
+.menu-root .weapon-stat__line--element {
+    align-items: center;
+}
+
+.menu-root .weapon-stat__line--element .mmark {
+    margin-right: 6px;
+}
+
+.menu-root .weapon-stat__value {
+    font-size: 30px;
+    -unity-font-style: bold;
+    height: 36px;
+    -unity-text-align: lower-left;
+}
+
+.menu-root .weapon-stat__value--grade {
+    color: var(--ie-accent);
+}
+
+.menu-root .weapon-stat__delta {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: var(--mn-good);
+    margin: 0 0 6px 6px;
+}
+
+.menu-root .weapon-stat__delta--down {
+    color: var(--mn-bad);
+}
+
+.menu-root .weapon-stat__element {
+    font-size: 14px;
+}
+
+.menu-root .weapon-card__text {
+    white-space: normal;
+    font-size: 13px;
+    color: var(--mn-soft-text);
+}
+
+.menu-root .weapon-card__footer {
+    white-space: normal;
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--ie-muted);
+}
+
+.menu-root .weapon-right {
+    flex-grow: 1;
+    margin-left: 24px;
+}
+
+.menu-root .weapon-stats {
+    margin-bottom: 10px;
+}
+
+.menu-root .stat-pentagon.weapon-pentagon {
+    height: 190px;
+}
+
+/* ---- Pictos ---- */
+
+.menu-root .screen--pictos {
+    flex-direction: row;
+}
+
+.menu-root .pictos-left {
+    width: 330px;
+}
+
+.menu-root .picto-list {
+    flex-grow: 1;
+}
+
+.menu-root .picto-row__equipped {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--ie-accent);
+    display: none;
+}
+
+.menu-root .picto-row--equipped > .picto-row__equipped {
+    display: flex;
+}
+
+.menu-root .picto-row__icon {
+    width: 16px;
+    height: 16px;
+    margin: 0 12px 0 4px;
+    rotate: 45deg;
+    border-width: 1px;
+    border-color: var(--ie-gilt);
+    background-color: rgba(8, 10, 18, 0.9);
+}
+
+.menu-root .picto-row__art {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    rotate: -45deg;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.menu-root .picto-row__name {
+    flex-grow: 1;
+    font-size: 15px;
+}
+
+.menu-root .picto-row__level {
+    font-size: 11px;
+    color: var(--ie-muted);
+    margin-right: 8px;
+}
+
+.menu-root .picto-row__wearer {
+    margin-left: 2px;
+}
+
+.menu-root .picto-row--locked {
+    opacity: 0.5;
+}
+
+.menu-root .pictos-middle {
+    width: 290px;
+    margin-left: 22px;
+}
+
+.menu-root .picto-card {
+    min-height: 128px;
+    padding: 12px 16px;
+}
+
+.menu-root .picto-card__name {
+    font-size: 17px;
+    -unity-font-style: bold;
+    color: var(--ie-accent);
+}
+
+.menu-root .picto-card__stats {
+    font-size: 13px;
+    margin: 4px 0;
+    color: var(--mn-good);
+}
+
+.menu-root .picto-card__text {
+    white-space: normal;
+    font-size: 13px;
+}
+
+.menu-root .picto-card__footer {
+    white-space: normal;
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--ie-muted);
+}
+
+.menu-root .slot-column {
+    margin-top: 16px;
+}
+
+.menu-root .slot {
+    flex-direction: row;
+    align-items: center;
+    height: 66px;
+    padding-left: 22px;
+}
+
+.menu-root .slot__diamond {
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+    rotate: 45deg;
+    border-width: 2px;
+    border-color: rgba(204, 209, 219, 0.75);
+    background-color: rgba(8, 10, 18, 0.95);
+    transition-property: scale;
+    transition-duration: 0.08s;
+}
+
+.menu-root .slot__icon {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    rotate: -45deg;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.menu-root .slot__index {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+.menu-root .slot__label {
+    font-size: 15px;
+}
+
+.menu-root .slot--empty .slot__label {
+    color: var(--ie-muted);
+}
+
+.menu-root .slot--selected .slot__diamond {
+    border-color: var(--ie-accent);
+    background-color: var(--mn-sweep);
+    scale: 1.1 1.1;
+}
+
+.menu-root .slot--selected .slot__label {
+    color: var(--ie-accent);
+}
+
+.menu-root .slot--target .slot__diamond {
+    border-color: rgb(255, 255, 255);
+}
+
+.menu-root .pictos-right {
+    flex-grow: 1;
+    margin-left: 24px;
+}
+
+.menu-root .pictos-level {
+    margin-bottom: 4px;
+}
+
+.menu-root .pictos-bar {
+    margin-bottom: 8px;
+}
+
+.menu-root .pictos-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.menu-root .pictos-stat {
+    width: 50%;
+    padding-right: 14px;
+}
+
+.menu-root .lumina-points {
+    font-size: 11px;
+    -unity-font-style: bold;
+    color: var(--ie-accent);
+    margin-left: 10px;
+}
+
+.menu-root .lumina-row {
+    height: 28px;
+    justify-content: space-between;
+}
+
+.menu-root .lumina-row__name {
+    font-size: 14px;
+}
+
+.menu-root .lumina-row__cost {
+    font-size: 12px;
+    color: var(--ie-muted);
+}
+
+.menu-root .lumina-row__none {
+    font-size: 13px;
+    color: var(--ie-muted);
+}
+
+/* ---- Skills ---- */
+
+.menu-root .screen--skills {
+    flex-direction: row;
+}
+
+.menu-root .skills-left {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.menu-root .skills-area {
+    flex-grow: 1;
+}
+
+.menu-root .skills-canvas {
+    position: absolute;
+}
+
+.menu-root .skills-links {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.menu-root .skill-node {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    border-color: rgba(204, 209, 219, 0.55);
+    background-color: rgba(18, 20, 28, 0.96);
+    transition-property: scale;
+    transition-duration: 0.08s;
+}
+
+.menu-root .skill-node--major {
+    border-radius: 3px;
+}
+
+.menu-root .skill-node__icon {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.menu-root .skill-node__glyph {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+.menu-root .skill-node__star {
+    position: absolute;
+    top: -6px;
+    width: 9px;
+    height: 9px;
+    rotate: 45deg;
+    background-color: var(--ie-accent);
+}
+
+.menu-root .skill-node--available {
+    border-color: var(--ie-ap);
+    background-color: rgba(20, 44, 110, 0.96);
+}
+
+.menu-root .skill-node--available .skill-node__glyph {
+    color: var(--ie-text);
+}
+
+.menu-root .skill-node--locked {
+    opacity: 0.6;
+}
+
+.menu-root .skill-node--unlocked {
+    border-color: rgb(255, 240, 200);
+    background-color: var(--ie-accent);
+}
+
+.menu-root .skill-node--unlocked .skill-node__glyph {
+    color: rgb(24, 22, 28);
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.menu-root .skill-node--selected {
+    scale: 1.22 1.22;
+    border-color: rgb(255, 255, 255);
+    border-width: 3px;
+}
+
+.menu-root .skills-side {
+    width: 290px;
+    margin-left: 22px;
+}
+
+.menu-root .skills-card {
+    margin-bottom: 10px;
+    padding: 10px 14px;
+}
+
+.menu-root .skills-card--stats {
+    padding: 4px;
+}
+
+/* Attribute radar chart (StatPentagon) */
+.menu-root .stat-pentagon {
+    height: 210px;
+}
+
+.menu-root .stat-pentagon__label {
+    font-size: 11px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+/* Skill points left, bare text under the tree */
+.menu-root .skills-points {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 6px;
+}
+
+.menu-root .skills-points__caption {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+    margin-right: 10px;
+    margin-bottom: 4px;
+}
+
+.menu-root .skills-points__value {
+    font-size: 28px;
+    -unity-font-style: bold;
+    color: var(--ie-accent);
+}
+
+.menu-root .skills-card--detail {
+    flex-grow: 1;
+}
+
+.menu-root .skills-detail__heading {
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+}
+
+.menu-root .skills-detail__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border-radius: 16px;
+    border-width: 1px;
+    border-color: var(--ie-ap);
+    background-color: rgba(20, 44, 110, 0.96);
+    align-items: center;
+    justify-content: center;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.menu-root .skills-detail__icon .skill-node__glyph {
+    color: var(--ie-text);
+}
+
+.menu-root .skills-detail__name {
+    font-size: 18px;
+    -unity-font-style: bold;
+}
+
+.menu-root .skills-detail__text {
+    white-space: normal;
+    font-size: 13px;
+    color: var(--mn-soft-text);
+}
+
+.menu-root .skills-detail__spacer {
+    flex-grow: 1;
+}
+
+.menu-root .skills-detail__footer {
+    flex-direction: row;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-color: rgba(209, 214, 224, 0.2);
+    padding-top: 8px;
+}
+
+.menu-root .skills-detail__cost-caption {
+    font-size: 11px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+    margin-right: 10px;
+}
+
+.menu-root .skills-detail__cost {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: var(--ie-accent);
+    flex-grow: 1;
+}
+
+.menu-root .skills-detail__cost--short {
+    color: var(--mn-bad);
+}
+
+.menu-root .skills-detail__state {
+    font-size: 11px;
+    -unity-font-style: bold;
+    color: var(--ie-muted);
+}
+
+.menu-root .skills-detail__state--unlocked {
+    color: var(--ie-accent);
+}
+
+.menu-root .skills-detail__state--available {
+    color: var(--ie-ap);
+}

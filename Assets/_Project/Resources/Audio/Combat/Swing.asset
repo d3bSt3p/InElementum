@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f29259e87442338a016acd10256ddc, type: 3}
+  m_Name: Swing
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Containers.SoundProfileData
+  audioType: 9
+  randomClipList:
+  - {fileID: 8300000, guid: 2d35026a2eead434c87b914e7086c9a0, type: 3}
+  - {fileID: 8300000, guid: 8985a80a499b37a4ba8d37677ed9d0d6, type: 3}
+  - {fileID: 8300000, guid: c59e8ff3ba80faf40993809e699c4091, type: 3}
+  volume: 0.8
+  pitchVariance: 0.08
+  minInterval: 0.03

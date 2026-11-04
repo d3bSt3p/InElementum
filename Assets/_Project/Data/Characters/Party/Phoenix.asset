@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d037adff9e04706b4a24a2529895710, type: 3}
+  m_Name: Phoenix
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Characters.PartyMemberData
+  characterID: phoenix
+  characterName: Phoenix
+  characterDescription: 
+  element: 1
+  baseStats:
+    vitality: 9
+    defense: 8
+    strength: 14
+    speed: 11
+    luck: 8
+  portrait: {fileID: -1320016134525516999, guid: 8f9843bf1bcddf241a492d86c39d9f50, type: 3}
+  battleSprite: {fileID: 0}
+  spriteSet: {fileID: 11400000, guid: c01bd7422b5f74442b48e63af62c4bd1, type: 2}
+  prefab: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 57d36f192dde34c4faeace28b043c14f, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: bcbc65328532ec945a52ae24dc4297f0, type: 2}
+  surge: {fileID: 11400000, guid: 26d98053395e3b54e84d283e1a9cd30d, type: 2}
+  maxAp: 10
+  defaultPictos:
+  - {fileID: 11400000, guid: 3eb532ece5c6f904c945a232e6812035, type: 2}
+  startingWeapons:
+  - {fileID: 11400000, guid: 4b36803185d18fa43b6b2d71d8575e69, type: 2}
+  - {fileID: 11400000, guid: 5442b7c57a597024aae27b4672d6bf93, type: 2}
+  skillTree: {fileID: 11400000, guid: aac5a787127f260499a280aa4726275b, type: 2}
+  explorationAbility: 1
+  switchSound: {fileID: 0}

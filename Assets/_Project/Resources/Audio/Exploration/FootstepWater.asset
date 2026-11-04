@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f29259e87442338a016acd10256ddc, type: 3}
+  m_Name: FootstepWater
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Containers.SoundProfileData
+  audioType: 24
+  randomClipList:
+  - {fileID: 8300000, guid: 905919d4925fe9c4dbb6e170404f8c60, type: 3}
+  - {fileID: 8300000, guid: e072d5ed883e7e04da8445f701fa87d6, type: 3}
+  - {fileID: 8300000, guid: 3ea1f1396193a8540b7b05a136db6856, type: 3}
+  - {fileID: 8300000, guid: fb3e2618b95f7844696e56cfc466a320, type: 3}
+  - {fileID: 8300000, guid: 580050d56d4bfba41a1574f414d6293e, type: 3}
+  - {fileID: 8300000, guid: de04b76bd3a380b409db68f9b5ab2aae, type: 3}
+  - {fileID: 8300000, guid: 26af383400a1e9b4bb3353ebb1134e3e, type: 3}
+  - {fileID: 8300000, guid: b3ab4b32a3309994fb9b10d9899b86eb, type: 3}
+  volume: 0.6
+  pitchVariance: 0.08
+  minInterval: 0.05

@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="Hud.uss" />
+    <Style src="Exploration.uss" />
+    <ui:VisualElement name="exploration-hud" class="ex-hud">
+        <ui:VisualElement name="switch-flash" class="ex-switch-flash" />
+        <ui:VisualElement name="character" class="ex-character">
+            <ui:VisualElement name="band" class="ex-character__band" />
+            <ui:VisualElement name="portrait" class="ex-character__portrait" />
+            <ui:VisualElement name="slot-key" class="ex-character__slot" />
+            <ui:VisualElement name="info" class="ex-character__info">
+                <ui:Label name="name" text="Name" class="ex-character__name" />
+                <ui:VisualElement class="ex-stat">
+                    <ui:Label text="HP" class="ex-stat__tag" />
+                    <ui:Label name="hp" text="0" class="ex-stat__value" />
+                    <ui:Label name="hp-max" text="/ 0" class="ex-stat__max" />
+                </ui:VisualElement>
+                <ui:VisualElement class="ie-bar ex-stat__bar">
+                    <ui:VisualElement name="hp-fill" class="ie-bar__fill ex-stat__fill" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="switch-strip" class="ex-switch">
+                <ui:VisualElement name="switch-previous-key" class="ex-switch__key" />
+                <ui:VisualElement name="switch-previous" class="ex-switch__emblem" />
+                <ui:VisualElement name="switch-next" class="ex-switch__emblem" />
+                <ui:VisualElement name="switch-next-key" class="ex-switch__key" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="wheel" class="ex-wheel">
+            <ui:VisualElement name="wheel-dim" class="ex-wheel__dim" />
+            <ui:VisualElement name="wheel-disc" class="ex-wheel__disc">
+                <ui:VisualElement name="wheel-glow" class="ex-wheel__glow" />
+                <ui:VisualElement name="wheel-ring" class="ex-wheel__ring" />
+                <ui:VisualElement name="wheel-pointer" class="ex-wheel__pointer" />
+                <ui:VisualElement name="wheel-slots" class="ex-wheel__slots" />
+                <ui:VisualElement name="wheel-center" class="ex-wheel__center">
+                    <ui:Label name="wheel-name" text="Name" class="ex-wheel__name" />
+                    <ui:Label name="wheel-element" text="Element" class="ex-wheel__element" />
+                    <ui:Label name="wheel-current" text="EXPLORING" class="ex-wheel__current" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

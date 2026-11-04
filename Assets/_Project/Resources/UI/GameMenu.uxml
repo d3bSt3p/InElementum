@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="GameMenu.uss" />
+    <ui:VisualElement name="menu-root" class="menu-root" picking-mode="Ignore">
+        <ui:VisualElement name="backdrop" class="menu-backdrop" />
+        <ui:VisualElement name="glow" class="menu-glow" picking-mode="Ignore" />
+        <ui:VisualElement name="body" class="menu-body" picking-mode="Ignore">
+            <ui:VisualElement name="nav" class="nav" picking-mode="Ignore">
+                <ui:Label text="Menu" class="nav-title" />
+                <ui:VisualElement name="nav-rule" class="nav-rule" picking-mode="Ignore" />
+                <ui:VisualElement name="nav-list" class="nav-list" picking-mode="Ignore" />
+                <ui:VisualElement class="nav-footer" picking-mode="Ignore">
+                    <ui:VisualElement class="nav-footer__row" picking-mode="Ignore">
+                        <ui:Label text="PLAY TIME" class="nav-footer__caption" />
+                        <ui:Label name="clock" text="000:00:00" class="nav-footer__value" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="nav-footer__row" picking-mode="Ignore">
+                        <ui:Label text="CURRENCY" class="nav-footer__caption" />
+                        <ui:Label name="currency" text="0" class="nav-footer__value" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="party-strip" class="party-strip" picking-mode="Ignore" />
+            <ui:VisualElement name="content" class="content" picking-mode="Ignore" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

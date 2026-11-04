@@ -1,0 +1,223 @@
+/* Exploration HUD: the explored character in the top left, the controls strip in the bottom left, and the
+   character wheel in the middle of the screen. Layout units are 720 tall. */
+
+.ex-hud {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* The burst of the new character's element over the screen when the explored character changes. Placed by code. */
+.ex-switch-flash {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    translate: -50% -50%;
+    opacity: 0;
+}
+
+/* The explored character */
+.ex-character {
+    position: absolute;
+    left: 18px;
+    top: 16px;
+    width: 420px;
+    height: 150px;
+}
+
+.ex-character__band {
+    position: absolute;
+    left: 44px;
+    top: 12px;
+    width: 340px;
+    height: 80px;
+}
+
+.ex-character__portrait {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 104px;
+    height: 104px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ex-character__slot {
+    position: absolute;
+    left: 4px;
+    top: 74px;
+}
+
+.ex-character__info {
+    position: absolute;
+    left: 112px;
+    top: 16px;
+    width: 270px;
+}
+
+.ex-character__name {
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.ex-stat {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 2px;
+}
+
+.ex-stat__tag {
+    font-size: 11px;
+    -unity-font-style: bold;
+    color: var(--ie-party-hp);
+    margin-right: 8px;
+    margin-bottom: 4px;
+}
+
+.ex-stat__value {
+    font-size: 21px;
+}
+
+.ex-stat__max {
+    font-size: 13px;
+    margin-left: 4px;
+    margin-bottom: 3px;
+    color: var(--ie-muted);
+}
+
+.ex-stat__bar {
+    width: 200px;
+    height: 4px;
+    margin-top: 3px;
+}
+
+.ex-stat__fill {
+    background-color: var(--ie-party-hp);
+}
+
+/* Previous and next characters, beside their trigger buttons */
+.ex-switch {
+    position: absolute;
+    left: 8px;
+    top: 110px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ex-switch__key {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.ex-switch__emblem {
+    width: 32px;
+    height: 32px;
+    margin-left: 3px;
+    margin-right: 3px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The character wheel */
+.ex-wheel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.ex-wheel__dim {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.ex-wheel__disc {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 440px;
+    height: 440px;
+    translate: -50% -50%;
+}
+
+.ex-wheel__glow {
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    right: -40px;
+    bottom: -40px;
+}
+
+.ex-wheel__ring {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 200px;
+    border-width: 2px;
+    border-color: var(--ie-gilt);
+    background-color: rgba(8, 10, 18, 0.78);
+}
+
+.ex-wheel__slots {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.ex-wheel__slot {
+    position: absolute;
+    width: 84px;
+    height: 104px;
+    align-items: center;
+    /* Placed by code: its badge centers on the slot point. */
+}
+
+.ex-wheel__slot-key {
+    margin-top: 2px;
+}
+
+.ex-wheel__center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 210px;
+    translate: -50% -50%;
+    align-items: center;
+}
+
+.ex-wheel__name {
+    font-size: 24px;
+    -unity-font-style: bold;
+}
+
+.ex-wheel__element {
+    font-size: 12px;
+    -unity-font-style: bold;
+    margin-top: 2px;
+}
+
+.ex-wheel__current {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: var(--ie-accent);
+    margin-top: 8px;
+}
+
+.ex-wheel__pointer {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2612027158f847538279f7d8f10dff91, type: 3}
+  m_Name: Stone Sentinel
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Characters.EnemyCharacterData
+  characterID: Stone Sentinel
+  characterName: Stone Sentinel
+  characterDescription: 
+  element: 5
+  baseStats:
+    vitality: 16
+    defense: 10
+    strength: 8
+    speed: 6
+    luck: 3
+  portrait: {fileID: 0}
+  battleSprite: {fileID: 0}
+  prefab: {fileID: 0}
+  followAbilityPattern: 1
+  enemyAbilityList:
+  - name: Bulwark
+    intention: {fileID: 11400000, guid: ff345d56477d47642b4f59cdf49d5c0b, type: 2}
+    hideActionValue: 0
+    actionList:
+    - effectType: 9
+      targetType: 6
+      minActionValue: 2
+      maxActionValue: 3
+      status: 0
+      stat: 1
+    hitCount: 1
+    element: 0
+    castTime: 3
+    isSteadfast: 0
+    defenseRule: 0
+    hitDelays: []
+    isGuard: 1
+    guardCounterPower: 4
+  - name: Quake Stomp
+    intention: {fileID: 11400000, guid: b6ca6a6865551c348bf95c01040874ae, type: 2}
+    hideActionValue: 0
+    actionList:
+    - effectType: 0
+      targetType: 0
+      minActionValue: 9
+      maxActionValue: 12
+      status: 0
+      stat: 0
+    hitCount: 1
+    element: 5
+    castTime: 1
+    isSteadfast: 1
+    defenseRule: 0
+    hitDelays: []
+    isGuard: 0
+    guardCounterPower: 0
+  - name: Granite Crush
+    intention: {fileID: 11400000, guid: b6ca6a6865551c348bf95c01040874ae, type: 2}
+    hideActionValue: 0
+    actionList:
+    - effectType: 0
+      targetType: 0
+      minActionValue: 4
+      maxActionValue: 6
+      status: 0
+      stat: 0
+    hitCount: 2
+    element: 5
+    castTime: 1.5
+    isSteadfast: 0
+    defenseRule: 2
+    hitDelays: []
+    isGuard: 0
+    guardCounterPower: 0
+  affinities:
+  - element: 3
+    damageMultiplier: 2
+  - element: 5
+    damageMultiplier: 0
+  - element: 4
+    damageMultiplier: 0.5
+  breakMeter: 60
+  rewards:
+    experience: 30
+    currencyMin: 20
+    currencyMax: 30
+    materialDrops:
+    - material: {fileID: 11400000, guid: cd8c678633757af41a2abed699d8153b, type: 2}
+      amount: 2
+      chance: 0.75
+    pictoDrop: {fileID: 0}
+  voice: {fileID: 11400000, guid: 9c544388db9f4caa981249ae43aef1da, type: 2}

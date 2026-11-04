@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb87351142b7e2d429a50b1d08dceae0, type: 3}
+  m_Name: Iron Skin
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Pictos.PictoData
+  id: Iron Skin
+  displayName: Iron Skin
+  icon: {fileID: 0}
+  description: Raises own Defense by 2 when battle starts.
+  modifiers:
+  - stat: 1
+    kind: 0
+    value: 3
+  passive: {fileID: 11400000, guid: cff01054ec8f775468ebbe8e7963f075, type: 2}
+  battlesToMaster: 3
+  luminaCost: 2

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d037adff9e04706b4a24a2529895710, type: 3}
+  m_Name: Diasas
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Characters.PartyMemberData
+  characterID: diasas
+  characterName: Diasas
+  characterDescription: 
+  element: 6
+  baseStats:
+    vitality: 10
+    defense: 9
+    strength: 13
+    speed: 9
+    luck: 9
+  portrait: {fileID: -1749770308836338320, guid: 5c821beaa0b085f4788809aff20cef7d, type: 3}
+  battleSprite: {fileID: 0}
+  spriteSet: {fileID: 11400000, guid: 1ed447fcc035bd440b1370d6d8694445, type: 2}
+  prefab: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 89ca818737937dc4bb067b4115a421ee, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: a2749a170a7cc0a40bc40607df086f40, type: 2}
+  surge: {fileID: 11400000, guid: 516acdaccc6dcc849ba6b81aa9cb2e3d, type: 2}
+  maxAp: 10
+  defaultPictos:
+  - {fileID: 11400000, guid: b9e525d965509584f87d8c759cccb2d4, type: 2}
+  startingWeapons:
+  - {fileID: 11400000, guid: b22fd6f4a9db94049bfdab49dc0ceeee, type: 2}
+  - {fileID: 11400000, guid: 06f63de89c795884ca6af037d3499a81, type: 2}
+  skillTree: {fileID: 11400000, guid: 1cc9460cc2efae14392d0c79fcac98ea, type: 2}
+  explorationAbility: 6
+  switchSound: {fileID: 0}

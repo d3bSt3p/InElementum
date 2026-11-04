@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8803e7b48e2bbd45a9a2d915a4e65f3, type: 3}
+  m_Name: Potion
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Actions.ItemData
+  id: Potion
+  displayName: Potion
+  icon: {fileID: 0}
+  description:
+  - descriptionText: Restores an ally's health.
+    enableOverrideColor: 0
+    overrideColor: {r: 0, g: 0, b: 0, a: 1}
+    useModifier: 0
+    modifiedEffectIndex: 0
+    modifierStatus: 0
+    modifierStat: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 0
+  specialKeywords: 
+  element: 0
+  targetType: 1
+  castTime: 0.5
+  effects:
+  - effectType: 1
+    targetType: 1
+    value: 30
+    delay: 0
+    status: 0
+    stat: 0
+  audioType: 5
+  fxType: 0
+  animationKey: 
+  stackMax: 9
+  usableOutsideCombat: 1

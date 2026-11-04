@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2612027158f847538279f7d8f10dff91, type: 3}
+  m_Name: Tide Crab
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Characters.EnemyCharacterData
+  characterID: Tide Crab
+  characterName: Tide Crab
+  characterDescription: 
+  element: 2
+  baseStats:
+    vitality: 9
+    defense: 9
+    strength: 5
+    speed: 4
+    luck: 3
+  portrait: {fileID: 0}
+  battleSprite: {fileID: 0}
+  prefab: {fileID: 0}
+  followAbilityPattern: 1
+  enemyAbilityList:
+  - name: Pincer Flurry
+    intention: {fileID: 11400000, guid: b6ca6a6865551c348bf95c01040874ae, type: 2}
+    hideActionValue: 0
+    actionList:
+    - effectType: 0
+      targetType: 0
+      minActionValue: 2
+      maxActionValue: 4
+      status: 0
+      stat: 0
+    hitCount: 2
+    element: 2
+    castTime: 1
+    isSteadfast: 0
+    defenseRule: 0
+    hitDelays: []
+    isGuard: 0
+    guardCounterPower: 0
+  - name: Harden
+    intention: {fileID: 11400000, guid: ff345d56477d47642b4f59cdf49d5c0b, type: 2}
+    hideActionValue: 0
+    actionList:
+    - effectType: 9
+      targetType: 6
+      minActionValue: 2
+      maxActionValue: 3
+      status: 0
+      stat: 1
+    hitCount: 1
+    element: 0
+    castTime: 1
+    isSteadfast: 0
+    defenseRule: 0
+    hitDelays: []
+    isGuard: 0
+    guardCounterPower: 0
+  affinities:
+  - element: 4
+    damageMultiplier: 2
+  - element: 1
+    damageMultiplier: 0.5
+  breakMeter: 0
+  rewards:
+    experience: 15
+    currencyMin: 10
+    currencyMax: 20
+    materialDrops:
+    - material: {fileID: 11400000, guid: cd8c678633757af41a2abed699d8153b, type: 2}
+      amount: 1
+      chance: 0.5
+    pictoDrop: {fileID: 0}
+  voice: {fileID: 11400000, guid: 3d62b80fcb7b4e2caeab1d9f7bd081c5, type: 2}

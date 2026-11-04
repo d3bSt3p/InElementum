@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d037adff9e04706b4a24a2529895710, type: 3}
+  m_Name: Kaimana
+  m_EditorClassIdentifier: InElementum.Runtime::InElementum.Data.Characters.PartyMemberData
+  characterID: kaimana
+  characterName: Kaimana
+  characterDescription: 
+  element: 2
+  baseStats:
+    vitality: 11
+    defense: 9
+    strength: 8
+    speed: 10
+    luck: 12
+  portrait: {fileID: -2090604164529553464, guid: bdee153d7399ef346ba5a8944a524028, type: 3}
+  battleSprite: {fileID: 0}
+  spriteSet: {fileID: 11400000, guid: 0a440435073c9f04da9fb741f2ca511b, type: 2}
+  prefab: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 319597caab978334c81d1d1606952adf, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: 1927727c1e05c78419618e99517185a1, type: 2}
+  surge: {fileID: 11400000, guid: 3407c2c787a429f498084d7bd74bdef3, type: 2}
+  maxAp: 10
+  defaultPictos:
+  - {fileID: 11400000, guid: c6954063944ccd64eb577f55427fce39, type: 2}
+  startingWeapons:
+  - {fileID: 11400000, guid: 3502593e8a105a34abbfe4f6d3f47bab, type: 2}
+  - {fileID: 11400000, guid: 561e8063bd6fcd146b531b166ddcec19, type: 2}
+  skillTree: {fileID: 11400000, guid: 0cffed774acc6254188891c548bd4b1c, type: 2}
+  explorationAbility: 2
+  switchSound: {fileID: 0}

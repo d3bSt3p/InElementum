@@ -1,0 +1,180 @@
+/* Combat HUD. Most elements are placed from code each frame (they follow characters and the camera); this sheet
+   holds their type, spacing, and static colors. Layout units are 720 tall. */
+
+/* Type */
+.cb-label {
+    font-size: 14px;
+}
+
+.cb-small {
+    font-size: 12px;
+}
+
+.cb-caps {
+    font-size: 12px;
+    -unity-font-style: bold;
+}
+
+.cb-title {
+    font-size: 17px;
+    -unity-font-style: bold;
+}
+
+.cb-number {
+    font-size: 22px;
+    -unity-font-style: bold;
+}
+
+.cb-item {
+    font-size: 16px;
+}
+
+.cb-tag {
+    font-size: 10px;
+    -unity-font-style: bold;
+}
+
+.cb-stat {
+    font-size: 19px;
+}
+
+.ie-root .cb-wrap {
+    white-space: normal;
+}
+
+.cb-row {
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Party cards */
+.cb-hp {
+    align-items: flex-end;
+}
+
+.cb-hp__tag {
+    margin-right: 6px;
+    margin-bottom: 5px;
+}
+
+.cb-hp__max {
+    margin-left: 4px;
+    margin-bottom: 3px;
+}
+
+/* Command menu rows */
+.cb-menu-row {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 8px;
+}
+
+.cb-menu-row__key {
+    margin-right: 8px;
+}
+
+.cb-menu-row__title {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.cb-menu-row__meta {
+    margin-left: 6px;
+}
+
+.cb-chip {
+    font-size: 10px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    height: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 6px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-width: 1px;
+}
+
+/* Timing prompt key entries */
+.cb-prompt-entry {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.cb-prompt-entry__title {
+    margin-left: 8px;
+}
+
+/* Damage numbers: centered on their point */
+.cb-popup {
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    translate: -50% -50%;
+}
+
+/* Victory screen */
+.cb-victory-title {
+    font-size: 56px;
+}
+
+.cb-victory-value {
+    font-size: 26px;
+}
+
+.cb-victory-header {
+    font-size: 26px;
+}
+
+.cb-victory-item {
+    font-size: 18px;
+}
+
+.cb-clip {
+    overflow: hidden;
+}
+
+.cb-level {
+    justify-content: flex-end;
+}
+
+.cb-level__tag {
+    margin-right: 6px;
+    margin-top: 3px;
+}
+
+.cb-level-up {
+    justify-content: flex-end;
+}
+
+.cb-level-up__arrow {
+    margin-right: 4px;
+}
+
+.cb-exp {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.cb-exp__next {
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+
+.cb-item-row__kind {
+    margin-left: 8px;
+    margin-top: 2px;
+}
+
+.cb-victory-prompt {
+    position: absolute;
+}
+
+.cb-victory-prompt__label {
+    margin-left: 10px;
+}
+
+.cb-victory-prompt:hover .cb-victory-prompt__label {
+    color: var(--ie-accent);
+}
